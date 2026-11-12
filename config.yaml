@@ -1,0 +1,21 @@
+execution_mode: manual
+providers:
+  - name: deepseek
+    protocol: openai-compatible
+    base_url: https://api.deepseek.com/v1
+    api_key_env: DEEPSEEK_API_KEY
+  - name: openRouter
+    protocol: openai-compatible
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: WSL_OPENROUTE_KEY
+mcp_servers:
+  - name: mcd
+    endpoint: https://mcp.mcd.cn
+    auth:
+      type: bearer
+      token_env: MCD_TOKEN
+  - name: luckin
+    endpoint: https://gwmcp.lkcoffee.com/order/user/mcp
+    auth:
+      type: bearer
+      token_env: LUCKIN_TOKEN
